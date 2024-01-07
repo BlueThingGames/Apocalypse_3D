@@ -1,0 +1,134 @@
+[gd_scene load_steps=10 format=3 uid="uid://cn48eaprx117"]
+
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_34nng"]
+[ext_resource type="PackedScene" uid="uid://15hdqavd40tj" path="res://scenes/player.tscn" id="1_h0k2o"]
+[ext_resource type="Material" uid="uid://bsb0062xs4bo6" path="res://graphics/textures/colors/gray.tres" id="3_hvwe0"]
+[ext_resource type="Script" path="res://scripts/score_counter.gd" id="5_v8brm"]
+[ext_resource type="PackedScene" uid="uid://dbtj27k5fj022" path="res://scenes/zombie.tscn" id="7_m1y1x"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_44v22"]
+vertices = PackedVector3Array(-18.5, 0.497962, -24.5, -24.5, 0.497962, -24.5, -24.5, 0.497962, -18.5, -12.25, 0.497962, -24.5, -18.5, 0.497962, -24.5, -24.5, 0.497962, -18.5, -12.25, 0.497962, -24.5, -24.5, 0.497962, -18.5, -24.5, 0.497962, -12.25, -6.25, 0.497962, -24.5, -1, 0.497962, -0.75, 0, 0.497962, -1, 0, 0.497962, -24.5, -6.25, 0.497962, -24.5, -24.5, 0.497962, -12.25, -24.5, 0.497962, -6.25, -24.5, 0.497962, 0, -1, 0.497962, 0, -1, 0.497962, -0.75, -24.5, 0.497962, -6.25, 24.5, 0.497962, -18.5, 24.5, 0.497962, -24.5, 18.25, 0.497962, -24.5, 24.5, 0.497962, -18.5, 18.25, 0.497962, -24.5, 12.25, 0.497962, -24.5, 24.5, 0.497962, -12.25, 0.75, 0.497962, -1, 1.25, 0.497962, 0, 24.5, 0.497962, 0, 24.5, 0.497962, -6.25, 12.25, 0.497962, -24.5, 6, 0.497962, -24.5, 24.5, 0.497962, -6.25, 24.5, 0.497962, -12.25, 12.25, 0.497962, -24.5, 0, 0.497962, -24.5, 0, 0.497962, -1, 0.75, 0.497962, -1, 6, 0.497962, -24.5, -24.5, 0.497962, 18.25, -24.5, 0.497962, 24.5, -18.5, 0.497962, 24.5, -24.5, 0.497962, 12.25, -24.5, 0.497962, 18.25, -18.5, 0.497962, 24.5, -12.25, 0.497962, 24.5, 0, 0.497962, 24.5, 0, 0.497962, 1, -1, 0.497962, 0.75, -24.5, 0.497962, 6, -24.5, 0.497962, 12.25, -6.25, 0.497962, 24.5, -24.5, 0.497962, 12.25, -12.25, 0.497962, 24.5, -6.25, 0.497962, 24.5, -1, 0.497962, 0.75, -1, 0.497962, 0, -24.5, 0.497962, 0, -24.5, 0.497962, 6, 18.25, 0.497962, 24.5, 24.5, 0.497962, 24.5, 24.5, 0.497962, 18.25, 12.25, 0.497962, 24.5, 18.25, 0.497962, 24.5, 24.5, 0.497962, 18.25, 12.25, 0.497962, 24.5, 24.5, 0.497962, 18.25, 24.5, 0.497962, 12.25, 6, 0.497962, 24.5, 24.5, 0.497962, 0, 1.25, 0.497962, 0, 0.75, 0.497962, 1, 24.5, 0.497962, 6, 0.75, 0.497962, 1, 0, 0.497962, 1, 0, 0.497962, 24.5, 6, 0.497962, 24.5, 24.5, 0.497962, 12.25, 24.5, 0.497962, 6)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 13), PackedInt32Array(13, 10, 14), PackedInt32Array(14, 10, 15), PackedInt32Array(17, 16, 18), PackedInt32Array(18, 16, 19), PackedInt32Array(22, 21, 20), PackedInt32Array(24, 23, 25), PackedInt32Array(25, 23, 26), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 30), PackedInt32Array(30, 27, 31), PackedInt32Array(31, 27, 32), PackedInt32Array(35, 34, 33), PackedInt32Array(37, 36, 38), PackedInt32Array(38, 36, 39), PackedInt32Array(42, 41, 40), PackedInt32Array(44, 43, 45), PackedInt32Array(45, 43, 46), PackedInt32Array(48, 47, 49), PackedInt32Array(49, 47, 52), PackedInt32Array(49, 52, 51), PackedInt32Array(49, 51, 50), PackedInt32Array(55, 54, 53), PackedInt32Array(57, 56, 58), PackedInt32Array(58, 56, 59), PackedInt32Array(62, 61, 60), PackedInt32Array(65, 64, 63), PackedInt32Array(67, 66, 68), PackedInt32Array(68, 66, 69), PackedInt32Array(71, 70, 72), PackedInt32Array(72, 70, 73), PackedInt32Array(75, 74, 76), PackedInt32Array(76, 74, 77), PackedInt32Array(77, 74, 78), PackedInt32Array(78, 74, 79)]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_p10h5"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_0d2at"]
+sky_material = SubResource("ProceduralSkyMaterial_p10h5")
+
+[sub_resource type="Environment" id="Environment_5tt56"]
+background_mode = 2
+sky = SubResource("Sky_0d2at")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_34nng")
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Map"]
+navigation_mesh = SubResource("NavigationMesh_44v22")
+
+[node name="Zombie" parent="Map/NavigationRegion3D" instance=ExtResource("7_m1y1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.58797, 0, 0)
+
+[node name="Player" parent="Map/NavigationRegion3D" instance=ExtResource("1_h0k2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Floor" type="CSGBox3D" parent="Map/NavigationRegion3D"]
+use_collision = true
+size = Vector3(50, 0.002, 50)
+material = ExtResource("3_hvwe0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Map"]
+environment = SubResource("Environment_5tt56")
+
+[node name="Spawns" type="Node3D" parent="Map"]
+
+[node name="Spawn1" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="Spawn2" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="Spawn3" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="Spawn4" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="Spawn5" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
+
+[node name="Spawn6" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -10)
+
+[node name="Spawn7" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 10)
+
+[node name="Spawn8" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -10)
+
+[node name="Ceiling" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.40182, 0)
+material_override = ExtResource("3_hvwe0")
+use_collision = true
+size = Vector3(55, 0.002, 55)
+material = ExtResource("3_hvwe0")
+
+[node name="Wall1" type="CSGBox3D" parent="Map"]
+transform = Transform3D(50, 0, 0, 0, 6.579, 0, 0, 0, 6.579, 0, 0.5, 25.5)
+use_collision = true
+material = ExtResource("3_hvwe0")
+
+[node name="Wall2" type="CSGBox3D" parent="Map"]
+transform = Transform3D(-2.18412e-06, 0, 6.57463, 0, 6.57463, 0, -49.9668, 0, -2.87386e-07, 25.5, 0.51, 0)
+material_override = ExtResource("3_hvwe0")
+use_collision = true
+
+[node name="Wall3" type="CSGBox3D" parent="Map"]
+transform = Transform3D(-2.18412e-06, 0, 6.57463, 0, 6.57463, 0, -49.9668, 0, -2.87386e-07, -25.5, 0.51, 0)
+material_override = ExtResource("3_hvwe0")
+use_collision = true
+
+[node name="Wall4" type="CSGBox3D" parent="Map"]
+transform = Transform3D(50, 0, 0, 0, 6.579, 0, 0, 0, 6.579, 0, 0.5, -25.5)
+use_collision = true
+material = ExtResource("3_hvwe0")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HitRect" type="ColorRect" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = -1279.0
+offset_top = -804.0
+offset_right = 2952.0
+offset_bottom = 1341.0
+color = Color(0.721569, 0.0509804, 0.231373, 0.627451)
+
+[node name="ScoreCounter" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 45.0
+offset_right = 256.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 48
+script = ExtResource("5_v8brm")
+
+[node name="ZombieSpawnTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="player_hit" from="Map/NavigationRegion3D/Player" to="." method="_on_player_player_hit"]
+[connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]

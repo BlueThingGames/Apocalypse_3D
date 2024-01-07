@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvw87faps40h8"
+path="res://.godot/imported/Zombie.obj-7b170dc02bf05875e0ca4f39cfe0753c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Zombie.obj-7b170dc02bf05875e0ca4f39cfe0753c.mesh"]
+
+source_file="res://graphics/models/zombie/OBJ/Zombie.obj"
+dest_files=["res://.godot/imported/Zombie.obj-7b170dc02bf05875e0ca4f39cfe0753c.mesh", "res://.godot/imported/Zombie.obj-7b170dc02bf05875e0ca4f39cfe0753c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
