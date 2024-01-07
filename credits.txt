@@ -1,1 +1,9 @@
+CREDITS
 
+Thanks to Kenney for his blaster pack! https://www.kenney.nl/assets/blaster-kit
+
+Thanks to Mixamo for robot model and animations! https://www.mixamo.com
+
+Thanks to LegionGames for Enemy Pathfinding and Animations help! https://www.youtube.com/watch?v=iV710Vm5qm0
+
+Thanks to Rayuse for controller support! https://github.com/Rayuse/3rd-person-controller-full-gamepad-support/blob/main/src/player/Player.gd
